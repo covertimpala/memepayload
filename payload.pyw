@@ -1,6 +1,15 @@
 import webbrowser
 import os
 import time
+import ctypes
+import random
+SPI_SETDESKWALLPAPER = 20
+d = random.randrange(0,2,1)
+print(d)
+if d == 0:
+    ctypes.windll.user32.SystemParametersInfoW(SPI_SETDESKWALLPAPER, 0, fr"{os.getcwd()}\beans.jpg" , 0)
+else:
+    ctypes.windll.user32.SystemParametersInfoW(SPI_SETDESKWALLPAPER, 0, fr"{os.getcwd()}\beans2.jpg" , 0)
 with open("set.txt", "r+") as set:
     content = set.read()
     if content != "G":
