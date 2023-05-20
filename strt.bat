@@ -1,4 +1,4 @@
-@echo off
+@echo on
 FOR /F "tokens=*" %g IN ('python --version') do (SET string=%g)
 set "versionn=Python 3"
 python3
